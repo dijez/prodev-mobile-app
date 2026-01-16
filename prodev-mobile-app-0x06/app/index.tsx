@@ -1,0 +1,134 @@
+import * as React from "react";
+import { View, Text } from "react-native";
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
+import { Dimensions,ImageBackground } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { Image } from "react-native";
+import { StyleSheet } from "react-native";
+// import { Button } from "react-native";
+import "react-native-gesture-handler"
+// import { NavigationContainer } from "@react-navigation/native";
+// import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// import join from "./join"
+// import signin from "./signin"
+
+// const Stack = createNativeStackNavigator();
+
+
+const styles = StyleSheet.create({
+     container: {
+    flex: 1,
+  },
+  background: {
+    flex: 1,
+    justifyContent: "center",
+    width: "100%",
+    height: Dimensions.get("window").height,
+  },
+  companyLogo: {
+    width: "100%",
+    alignItems: "center",
+    padding: 20,
+    marginBottom: 50,
+  },
+  textGroup: {
+    alignItems: "center",
+  },
+  textLarge: {
+    color: "white",
+    fontWeight: "800",
+    fontSize: 40,
+    textAlign: "center",
+    marginBottom: 12,
+  },
+  textSmall: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "200",
+    textAlign: "center",
+  },
+  transparentButton: {
+    borderColor: "white",
+    borderWidth: 2,
+    borderRadius: 40,
+    paddingVertical: 15,
+    paddingHorizontal: 5,
+    alignItems: "center",
+    fontSize: 20,
+    flex: 1,
+  },
+  button: {
+    borderColor: "white",
+    borderWidth: 2,
+    borderRadius: 40,
+    paddingVertical: 15,
+    paddingHorizontal: 5,
+    alignItems: "center",
+    fontSize: 20,
+    backgroundColor: "white",
+    flex: 1,
+  },
+  buttonGroup: {
+    flexDirection: "row",
+    gap: 20,
+    paddingHorizontal: 20,
+  },
+})
+
+
+
+export default function Index() {
+  return (
+<SafeAreaProvider>
+  <SafeAreaView  style={{flex: 1}}>
+    <ImageBackground 
+    source={require("@/assets/images/background-image.png")}
+    style={styles.background}
+    resizeMode="cover"
+    // Dimension.get("window").height
+    >
+
+
+
+  <View style={styles.companyLogo}>
+    
+    <Image source={require("@/assets/images/logo.png")} />
+    
+    <View style={styles.textGroup}>
+      <Text style={styles.textLarge}>Find your favorite place here</Text>
+      <Text style={styles.textSmall}>The best prices for over 2 </Text>
+      <Text style={styles.textSmall}>million properties worldwide</Text>
+    </View>
+  
+    <View style={styles.buttonGroup}>
+    
+      <TouchableOpacity style={styles.button}>
+        <Text style={{ ...styles.textSmall, color: "black" }}>Join here</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.transparentButton}>
+        
+        <Text style={styles.textSmall}>Sign In</Text>
+      </TouchableOpacity>
+    
+    </View>
+
+    <View style={{alignItems: "center", paddingVertical: 20}}>
+      <Text style={{color: "white"}}>Continue to home</Text>
+    </View>
+  </View>
+    </ImageBackground>
+  </SafeAreaView>
+</SafeAreaProvider>
+  );
+}
+
+
+
+
+
+      //  <NavigationContainer>
+      //   <Stack.Navigator>
+      //     <Stack.Screen name="signin" component={signin} />
+      //   </Stack.Navigator>
+      //  </NavigationContainer>
