@@ -1,12 +1,11 @@
-import * as React from "react"
+import * as React from "react";
+import { View, Text } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import { Text, View } from "react-native";
-import { ImageBackground } from "expo-image";
-import { Dimensions } from "react-native";
+import { Dimensions,ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { Image } from "react-native";
 import { StyleSheet } from "react-native";
-import { Button } from "react-native";
+// import { Button } from "react-native";
 import "react-native-gesture-handler"
 // import { NavigationContainer } from "@react-navigation/native";
 // import { createNativeStackNavigator } from "@react-navigation/native-stack";
